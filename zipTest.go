@@ -44,11 +44,10 @@ func main() {
 		fmt.Println(err)
 	}
 
-	outfile, err := os.Create("ziptest.zip")
+	outfile, err := os.Create("ziptest.zstd")
 	if err != nil {
 		fmt.Println(err)
 	}
-
 
 	//	test, err := ioutil.ReadAll(file)
 

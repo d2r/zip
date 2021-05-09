@@ -1,0 +1,8 @@
+# github.com/golang/snappy v0.0.3
+github.com/golang/snappy
+# github.com/klauspost/compress v1.12.3-0.20210503082600-20ca64cc6979
+## explicit
+github.com/klauspost/compress/fse
+github.com/klauspost/compress/huff0
+github.com/klauspost/compress/zstd
+github.com/klauspost/compress/zstd/internal/xxhash

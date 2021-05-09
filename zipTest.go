@@ -27,15 +27,15 @@ func Compress(in io.Reader, out io.Writer) error {
 }
 
 func Decompress(in io.Reader, out io.Writer) error {
-    d, err := zstd.NewReader(in)
-    if err != nil {
-        return err
-    }
-    defer d.Close()
-    
-    // Copy content...
-    _, err = io.Copy(out, d)
-    return err
+	d, err := zstd.NewReader(in)
+	if err != nil {
+		return err
+	}
+	defer d.Close()
+
+	// Copy content...
+	_, err = io.Copy(out, d)
+	return err
 }
 
 func main() {
@@ -65,7 +65,6 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
-
 
 	Decompress(outfile2, outtest)
 }

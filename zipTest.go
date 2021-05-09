@@ -13,16 +13,16 @@ import (
 func Compress(in io.Reader, out io.Writer) error {
 	enc, err := zstd.NewWriter(out)
 	if err != nil {
-		fmt.Printf("newWriter error:%v", err)
+		fmt.Printf("newWriter error:%v\n", err)
 		return err
 	}
 	written, err := io.Copy(enc, in)
 	if err != nil {
-		fmt.Printf("io.Copy error:%v", err)
+		fmt.Printf("io.Copy error:%v\n", err)
 		enc.Close()
 		return err
 	}
-	fmt.Printf("Successfully written:%v", written)
+	fmt.Printf("Successfully written:%v\n", written)
 	return enc.Close()
 }
 
